@@ -39,7 +39,7 @@
    </script>
 <script>
 let tglNow = new Date();
-let waktuBatas = new Date("2025-04-14T23:59:59");
+let waktuBatas = new Date("2025-05-07T23:59:59");
 if (tglNow.getTime() >= waktuBatas.getTime()) {
   document.location.href = 'https://suspended-website.com';
 } else {
